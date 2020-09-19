@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic jQuery example</title>
+</head>
+<body>
+<button onclick="plainAction()">Plain JS</button>
+<button onclick="jQueryAction()">jQuery</button>
+<br/>
+<hr/>
+<div>First</div>
+<div>Second</div>
+<div>Third</div>
+<script>
+    function plainAction(){
+        let elem = document.getElementsByTagName("div")[0];
+        alert (elem.innerHTML);
+
+    }
+    function jQueryAction() {
+        let elem = $("div")[0];
+        alert  ($(elem).html());
+    }
+
+</script>
+<!-- Linking jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+</html>
