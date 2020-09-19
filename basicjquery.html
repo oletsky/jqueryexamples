@@ -7,11 +7,17 @@
 <body>
 <button onclick="plainAction()">Plain JS</button>
 <button onclick="jQueryAction()">jQuery</button>
+<button onclick="jQueryChange()">Change</button>
+<button onclick="jQueryChangeStyle()">Change style</button>
+<button onclick="jQueryIdentifier()">VIP</button>
+<button onclick="jQueryAppend()">Append</button>
 <br/>
 <hr/>
 <div>First</div>
 <div>Second</div>
 <div>Third</div>
+<div id="vip">Very important element</div>
+
 <script>
     function plainAction(){
         let elem = document.getElementsByTagName("div")[0];
@@ -20,7 +26,30 @@
     }
     function jQueryAction() {
         let elem = $("div")[0];
-        alert  ($(elem).html());
+        alert  ($(elem).text());
+    }
+    
+    function jQueryChange() {
+        let elem = $("div")[0];
+        $(elem).html("<p>New text </p>");
+       }
+
+    function jQueryChangeStyle() {
+        let elem = $("div")[0];
+        $(elem).css("color","green");
+    }
+
+    function jQueryIdentifier() {
+        let elem = $("#vip");
+        alert ($(elem).html());
+
+    }
+
+    function jQueryAppend() {
+        $('body>div')[2].append('<p>New</p>');
+
+
+
     }
 
 </script>
